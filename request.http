@@ -1,0 +1,62 @@
+GET http://localhost:5000/criptoc 
+
+###
+
+GET http://localhost:5000/criptoc/topvalue
+
+###
+
+GET http://localhost:5000/criptoc/BTC
+
+###
+
+POST http://localhost:5000/criptoc
+Content-Type: application/json
+
+{
+  "name": "Ethereum",
+  "symbol": "ETH",
+  "description": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts.",
+  "price": 1300,
+  "change_24h": -8.28,
+  "cap": 149368220223 
+}
+
+###
+
+POST http://localhost:5000/criptoc 
+Content-Type: application/json
+
+{
+  "name": "Bitcoin",
+  "symbol": "BTC",
+  "description": "Bitcoin is the biggest crypto coin on the market",
+  "price": 28000,
+  "change_24h": -8.16,
+  "cap": 588507005480 
+}
+
+###
+
+PUT http://localhost:5000/criptoc/BTC
+Content-Type: application/json
+
+{
+  "price": 30000
+}
+
+###
+
+PUT http://localhost:5000/criptoc/up/BTC
+
+###
+
+PUT http://localhost:5000/criptoc/down/BTC
+
+###
+
+DELETE http://localhost:5000/criptoc/BTC
+
+###
+
+DELETE http://localhost:5000/criptoc/ETH
