@@ -1,6 +1,6 @@
 import mongoose, { Schema, model, Document } from 'mongoose';
 
-interface ICriptoc extends Document {
+export interface ICriptoc {
   name: string;
   symbol: string;
   description: string;
@@ -8,6 +8,8 @@ interface ICriptoc extends Document {
   change_24h: number;
   cap: number;
 }
+
+interface ICriptocDoc extends ICriptoc, Document {}
 
 const CriptocSchema = new Schema({
   name: { type: String, required: true },
@@ -25,4 +27,4 @@ const CriptocSchema = new Schema({
   cap: { type: Number, required: true },
 });
 
-export default model<ICriptoc>('Criptoc', CriptocSchema, 'criptoc');
+export default model<ICriptocDoc>('Criptoc', CriptocSchema, 'criptoc');
